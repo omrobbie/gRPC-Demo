@@ -11,6 +11,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
 
+    private var priceData: [Streaming_Saham] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                self.tableView.reloadData()
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +36,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
 
         GrpcManager.shared.getPriceFeed { price in
-            print(price)
+            self.priceData = price
         }
     }
 
@@ -52,7 +61,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return priceData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -60,9 +69,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
             withReuseIdentifier: "CustomCollectionViewCell",
             for: indexPath
         ) as! CustomCollectionViewCell
+        let data = priceData[indexPath.row]
         cell.backgroundColor = indexPath.row % 2 == 0 ? .systemGray5 : .systemGray6
-        cell.nameLabel.text = "Name \(indexPath.row)"
-        cell.priceLabel.text = "Price \(indexPath.row)"
+        cell.nameLabel.text = data.name
+        cell.priceLabel.text = String(data.price)
         return cell
     }
 
@@ -73,7 +83,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return priceData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,9 +91,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             withIdentifier: "CustomTableViewCell",
             for: indexPath
         ) as! CustomTableViewCell
+        let data = priceData[indexPath.row]
         cell.backgroundColor = indexPath.row % 2 == 0 ? .systemGray5 : .systemGray6
-        cell.nameLabel.text = "Name \(indexPath.row)"
-        cell.priceLabel.text = "Price \(indexPath.row)"
+        cell.nameLabel.text = data.name
+        cell.priceLabel.text = String(data.price)
         return cell
     }
 }
