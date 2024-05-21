@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53744EDCF33E2BCC8BA282EF /* Pods_gRPC_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3955575F72A81F57947124A1 /* Pods_gRPC_Demo.framework */; };
+		FC6734FA2BECCE5500F464D7 /* GrpcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6734F92BECCE5500F464D7 /* GrpcManager.swift */; };
+		FC6734FD2BECCF0E00F464D7 /* price.proto in Sources */ = {isa = PBXBuildFile; fileRef = FC6734FC2BECCF0E00F464D7 /* price.proto */; };
+		FCAD2E652BFB2F2800B36B8E /* price.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD2E632BFB2F2700B36B8E /* price.pb.swift */; };
+		FCAD2E662BFB2F2800B36B8E /* price.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD2E642BFB2F2700B36B8E /* price.grpc.swift */; };
 		FCEE2C812BD7602800FA1530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE2C802BD7602800FA1530 /* AppDelegate.swift */; };
 		FCEE2C832BD7602800FA1530 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE2C822BD7602800FA1530 /* SceneDelegate.swift */; };
 		FCEE2C852BD7602800FA1530 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE2C842BD7602800FA1530 /* ViewController.swift */; };
@@ -16,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3955575F72A81F57947124A1 /* Pods_gRPC_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gRPC_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F07332BA8919007E3DDC031 /* Pods-gRPC Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gRPC Demo.debug.xcconfig"; path = "Target Support Files/Pods-gRPC Demo/Pods-gRPC Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		9A4BE1B2C10C34F942C68667 /* Pods-gRPC Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gRPC Demo.release.xcconfig"; path = "Target Support Files/Pods-gRPC Demo/Pods-gRPC Demo.release.xcconfig"; sourceTree = "<group>"; };
+		FC6734F92BECCE5500F464D7 /* GrpcManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrpcManager.swift; sourceTree = "<group>"; };
+		FC6734FC2BECCF0E00F464D7 /* price.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = price.proto; sourceTree = "<group>"; };
+		FCAD2E632BFB2F2700B36B8E /* price.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = price.pb.swift; sourceTree = "<group>"; };
+		FCAD2E642BFB2F2700B36B8E /* price.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = price.grpc.swift; sourceTree = "<group>"; };
 		FCEE2C7D2BD7602800FA1530 /* gRPC Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gRPC Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEE2C802BD7602800FA1530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCEE2C822BD7602800FA1530 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +43,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53744EDCF33E2BCC8BA282EF /* Pods_gRPC_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65FB7A004D5D239CFAC17A86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3955575F72A81F57947124A1 /* Pods_gRPC_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC37698A348FA33C430EB5A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F07332BA8919007E3DDC031 /* Pods-gRPC Demo.debug.xcconfig */,
+				9A4BE1B2C10C34F942C68667 /* Pods-gRPC Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC6734F82BECCE3D00F464D7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FC6734F92BECCE5500F464D7 /* GrpcManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FC6734FB2BECCF0200F464D7 /* Proto */ = {
+			isa = PBXGroup;
+			children = (
+				FCAD2E642BFB2F2700B36B8E /* price.grpc.swift */,
+				FCAD2E632BFB2F2700B36B8E /* price.pb.swift */,
+				FC6734FC2BECCF0E00F464D7 /* price.proto */,
+			);
+			path = Proto;
+			sourceTree = "<group>";
+		};
 		FCEE2C742BD7602800FA1530 = {
 			isa = PBXGroup;
 			children = (
 				FCEE2C7F2BD7602800FA1530 /* gRPC Demo */,
 				FCEE2C7E2BD7602800FA1530 /* Products */,
+				DC37698A348FA33C430EB5A5 /* Pods */,
+				65FB7A004D5D239CFAC17A86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +106,8 @@
 		FCEE2C7F2BD7602800FA1530 /* gRPC Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FC6734FB2BECCF0200F464D7 /* Proto */,
+				FC6734F82BECCE3D00F464D7 /* Manager */,
 				FCEE2C802BD7602800FA1530 /* AppDelegate.swift */,
 				FCEE2C822BD7602800FA1530 /* SceneDelegate.swift */,
 				FCEE2C842BD7602800FA1530 /* ViewController.swift */,
@@ -74,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCEE2C912BD7602B00FA1530 /* Build configuration list for PBXNativeTarget "gRPC Demo" */;
 			buildPhases = (
+				25C62EF2D607FD066E4DEECB /* [CP] Check Pods Manifest.lock */,
 				FCEE2C792BD7602800FA1530 /* Sources */,
 				FCEE2C7A2BD7602800FA1530 /* Frameworks */,
 				FCEE2C7B2BD7602800FA1530 /* Resources */,
+				616D7E4DFBF236941E2CE047 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +187,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25C62EF2D607FD066E4DEECB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gRPC Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		616D7E4DFBF236941E2CE047 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gRPC Demo/Pods-gRPC Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gRPC Demo/Pods-gRPC Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gRPC Demo/Pods-gRPC Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FCEE2C792BD7602800FA1530 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,7 +236,11 @@
 			files = (
 				FCEE2C852BD7602800FA1530 /* ViewController.swift in Sources */,
 				FCEE2C812BD7602800FA1530 /* AppDelegate.swift in Sources */,
+				FCAD2E652BFB2F2800B36B8E /* price.pb.swift in Sources */,
+				FCAD2E662BFB2F2800B36B8E /* price.grpc.swift in Sources */,
 				FCEE2C832BD7602800FA1530 /* SceneDelegate.swift in Sources */,
+				FC6734FA2BECCE5500F464D7 /* GrpcManager.swift in Sources */,
+				FC6734FD2BECCF0E00F464D7 /* price.proto in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +387,14 @@
 		};
 		FCEE2C922BD7602B00FA1530 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F07332BA8919007E3DDC031 /* Pods-gRPC Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8RY97YBM7S;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "gRPC Demo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -320,12 +422,14 @@
 		};
 		FCEE2C932BD7602B00FA1530 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A4BE1B2C10C34F942C68667 /* Pods-gRPC Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8RY97YBM7S;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "gRPC Demo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
