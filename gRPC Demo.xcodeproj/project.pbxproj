@@ -10,6 +10,10 @@
 		53744EDCF33E2BCC8BA282EF /* Pods_gRPC_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3955575F72A81F57947124A1 /* Pods_gRPC_Demo.framework */; };
 		FC6734FA2BECCE5500F464D7 /* GrpcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6734F92BECCE5500F464D7 /* GrpcManager.swift */; };
 		FC6734FD2BECCF0E00F464D7 /* price.proto in Sources */ = {isa = PBXBuildFile; fileRef = FC6734FC2BECCF0E00F464D7 /* price.proto */; };
+		FC9C89B12BFC8EF2002CFC8B /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9C89B02BFC8EF2002CFC8B /* CustomCollectionViewCell.xib */; };
+		FC9C89B22BFC8EF2002CFC8B /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9C89AF2BFC8EF2002CFC8B /* CustomCollectionViewCell.swift */; };
+		FC9C89B52BFC8F11002CFC8B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9C89B42BFC8F11002CFC8B /* CustomTableViewCell.xib */; };
+		FC9C89B62BFC8F11002CFC8B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9C89B32BFC8F11002CFC8B /* CustomTableViewCell.swift */; };
 		FCAD2E652BFB2F2800B36B8E /* price.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD2E632BFB2F2700B36B8E /* price.pb.swift */; };
 		FCAD2E662BFB2F2800B36B8E /* price.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD2E642BFB2F2700B36B8E /* price.grpc.swift */; };
 		FCEE2C812BD7602800FA1530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE2C802BD7602800FA1530 /* AppDelegate.swift */; };
@@ -26,6 +30,10 @@
 		9A4BE1B2C10C34F942C68667 /* Pods-gRPC Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gRPC Demo.release.xcconfig"; path = "Target Support Files/Pods-gRPC Demo/Pods-gRPC Demo.release.xcconfig"; sourceTree = "<group>"; };
 		FC6734F92BECCE5500F464D7 /* GrpcManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrpcManager.swift; sourceTree = "<group>"; };
 		FC6734FC2BECCF0E00F464D7 /* price.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = price.proto; sourceTree = "<group>"; };
+		FC9C89AF2BFC8EF2002CFC8B /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC9C89B02BFC8EF2002CFC8B /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		FC9C89B32BFC8F11002CFC8B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		FC9C89B42BFC8F11002CFC8B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		FCAD2E632BFB2F2700B36B8E /* price.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = price.pb.swift; sourceTree = "<group>"; };
 		FCAD2E642BFB2F2700B36B8E /* price.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = price.grpc.swift; sourceTree = "<group>"; };
 		FCEE2C7D2BD7602800FA1530 /* gRPC Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gRPC Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +93,17 @@
 			path = Proto;
 			sourceTree = "<group>";
 		};
+		FC9C89AE2BFC8ECC002CFC8B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC9C89AF2BFC8EF2002CFC8B /* CustomCollectionViewCell.swift */,
+				FC9C89B02BFC8EF2002CFC8B /* CustomCollectionViewCell.xib */,
+				FC9C89B32BFC8F11002CFC8B /* CustomTableViewCell.swift */,
+				FC9C89B42BFC8F11002CFC8B /* CustomTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FCEE2C742BD7602800FA1530 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +125,7 @@
 		FCEE2C7F2BD7602800FA1530 /* gRPC Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FC9C89AE2BFC8ECC002CFC8B /* Cell */,
 				FC6734FB2BECCF0200F464D7 /* Proto */,
 				FC6734F82BECCE3D00F464D7 /* Manager */,
 				FCEE2C802BD7602800FA1530 /* AppDelegate.swift */,
@@ -182,6 +202,8 @@
 				FCEE2C8D2BD7602B00FA1530 /* LaunchScreen.storyboard in Resources */,
 				FCEE2C8A2BD7602B00FA1530 /* Assets.xcassets in Resources */,
 				FCEE2C882BD7602800FA1530 /* Main.storyboard in Resources */,
+				FC9C89B52BFC8F11002CFC8B /* CustomTableViewCell.xib in Resources */,
+				FC9C89B12BFC8EF2002CFC8B /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,9 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9C89B62BFC8F11002CFC8B /* CustomTableViewCell.swift in Sources */,
 				FCEE2C852BD7602800FA1530 /* ViewController.swift in Sources */,
 				FCEE2C812BD7602800FA1530 /* AppDelegate.swift in Sources */,
 				FCAD2E652BFB2F2800B36B8E /* price.pb.swift in Sources */,
+				FC9C89B22BFC8EF2002CFC8B /* CustomCollectionViewCell.swift in Sources */,
 				FCAD2E662BFB2F2800B36B8E /* price.grpc.swift in Sources */,
 				FCEE2C832BD7602800FA1530 /* SceneDelegate.swift in Sources */,
 				FC6734FA2BECCE5500F464D7 /* GrpcManager.swift in Sources */,
